@@ -48,3 +48,7 @@
     .login-body {
         text-align: left;
     }
+
+    .invalid-feedback {
+        display: block !important;
+    }

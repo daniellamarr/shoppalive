@@ -16,10 +16,10 @@ class PagesController extends Controller
         return view('shop');
     }
     
-    public function login()
-    {
-        return view('auth.login');
-    }
+    // public function login()
+    // {
+    //     return view('auth.login');
+    // }
     
     // public function register()
     // {

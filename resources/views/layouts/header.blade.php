@@ -160,13 +160,23 @@
                     </form>
                 </div>
                 <!-- Favourite Area -->
+                @guest
                 <div class="favourite-area">
-                    <a href="#"><img src="img/core-img/heart.svg" alt=""></a>
+                    <a href="{{ route('register') }}">Register</a>
                 </div>
                 <!-- User Login Info -->
                 <div class="user-login-info">
-                    <a href="{{ url('login') }}"><img src="img/core-img/user.svg" alt=""></a>
+                    <a href="{{ route('login') }}">Login</a>
                 </div>
+                @else
+                <div class="favourite-area">
+                    <a href="{{ route('dashboard') }}"><img src="img/core-img/heart.svg" alt=""></a>
+                </div>
+                <!-- User Login Info -->
+                <div class="user-login-info">
+                    <a href="{{ route('dashboard') }}"><img src="img/core-img/user.svg" alt=""></a>
+                </div>
+                @endguest
                 <!-- Cart Area -->
                 <div class="cart-area">
                     <a href="#" id="essenceCartBtn"><img src="img/core-img/bag.svg" alt=""> <span>3</span></a>

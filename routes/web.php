@@ -11,15 +11,14 @@
 |
 */
 
-Route::get('/', 'PagesController@index');
+Route::get('/', 'PagesController@index')->name('home');
 
-Route::get('/home', 'PagesController@index');
+Route::get('/home', 'PagesController@index')->name('home');
 
-Route::get('/shop', 'PagesController@shop');
+Route::get('/shop', 'PagesController@shop')->name('shop');
 
-Route::get('/u/dashboard', 'PagesController@dashboard');
+Route::get('/u/dashboard', 'PagesController@dashboard')->name('dashboard');
 
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
