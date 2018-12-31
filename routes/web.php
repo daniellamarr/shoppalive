@@ -17,7 +17,10 @@ Route::get('/home', 'PagesController@index')->name('home');
 
 Route::get('/shop', 'PagesController@shop')->name('shop');
 
-Route::get('/u/dashboard', 'PagesController@dashboard')->name('dashboard');
+Route::group(['middleware' => ['auth']], function() {
+    Route::get('/u/dashboard', 'UserController@dashboard')->name('dashboard');
+    Route::get('/u/store', 'UserController@store')->name('store');
+});
 
 
 Auth::routes();
