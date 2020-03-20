@@ -101,7 +101,14 @@
 }
 
 .text {
-  color: white;
+  color: 333;
   font-size: 16px;
-  padding: 16px 32px;
+  font-weight: bold;
+  /* padding: 16px 32px; */
+}
+
+.center-align {
+  width: 100%;
+  text-align: center;
+  margin-top: 50px;
 }

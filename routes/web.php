@@ -20,6 +20,7 @@ Route::get('/shop', 'PagesController@shop')->name('shop');
 Route::group(['middleware' => ['auth']], function() {
     Route::get('/u/dashboard', 'UserController@dashboard')->name('dashboard');
     Route::get('/u/store', 'UserController@store')->name('store');
+    Route::post('/u/store/product', 'UserController@addNewProduct')->name('createProduct');
 });
 
 
